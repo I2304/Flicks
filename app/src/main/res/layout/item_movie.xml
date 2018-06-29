@@ -34,4 +34,19 @@
         android:text="Movie overview and synopsis"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:id="@+id/btnShowMore"
+        android:layout_width="wrap_content"
+        android:layout_height="133dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="2dp"
+        android:background="#00ffffff"
+        android:paddingTop="110dp"
+        android:text="See More"
+        android:textAlignment="center"
+        android:textColor="#a9a9a9"
+        android:textSize="17sp" />
+
 </RelativeLayout>
