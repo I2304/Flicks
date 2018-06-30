@@ -32,9 +32,9 @@ public class MovieDetailsActivity extends AppCompatActivity {
     RatingBar rbVoteAverage;
     RatingBar ratingBar;
 
-    public final static String API_BASE_URl = "https://api_themoviedb.org/3";
+    public final static String API_BASE_URl = "https://api.themoviedb.org/3";
     public final static String API_KEY_PARAM = "api_key";
-    public final static String TAG ="MovieTrailerActivity";
+    public final static String TAG = "MovieTrailerActivity";
 
     String key;
     String url;
