@@ -35,9 +35,11 @@ public class MovieDetailsActivity extends AppCompatActivity {
     RatingBar ratingBar;
     Button btnTickets;
     Button btnShowtimes;
+    Button btnReviews;
 
     public final static String Tickets_URL = "https://www.amctheatres.com";
-    public final static String Showtimes_URL = "https://www.amctheatres.com/showtimes";
+    public final static String SHOWTIMES_URL = "https://www.amctheatres.com/showtimes";
+    public final static String REVIEWS_URL = "https://www.rottentomatoes.com/";
     public final static String API_BASE_URl = "https://api.themoviedb.org/3";
     public final static String API_KEY_PARAM = "api_key";
     public final static String TAG = "MovieTrailerActivity";
@@ -74,6 +76,9 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
         btnTickets = (Button) findViewById(R.id.btnTickets);
         btnShowtimes = (Button) findViewById(R.id.btnShowtimes);
+        btnReviews = (Button) findViewById(R.id.btnReviews);
+
+        // set functionality
         btnTickets.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 goToUrl(Tickets_URL);
@@ -81,7 +86,13 @@ public class MovieDetailsActivity extends AppCompatActivity {
         });
         btnShowtimes.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                goToUrl(Showtimes_URL);
+                goToUrl(SHOWTIMES_URL);
+            }
+        });
+
+        btnReviews.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                goToUrl(REVIEWS_URL);
             }
         });
 

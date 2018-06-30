@@ -41,36 +41,46 @@
         android:stepSize="0.5" />
 
     <Button
-        android:id="@+id/btnTrailer"
-        android:layout_width="120dp"
+        android:id="@+id/btnReviews"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/btnTrailer2"
+        android:background="#000000"
+        android:onClick="onTrailerClick"
+        android:text="Rotten Tomatoes"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnTrailer2"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:background="#8B0000"
-        android:text="Trailer"
+        android:layout_marginBottom="61dp"
+        android:background="#000000"
         android:onClick="onTrailerClick"
+        android:text="Trailer"
         android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/btnShowtimes"
-        android:layout_width="120dp"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/btnTrailer2"
         android:background="#8B0000"
         android:text="Showtimes"
-        android:onClick="onShowtimesClick"
         android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/btnTickets"
-        android:layout_width="120dp"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignStart="@+id/btnReviews"
         android:background="#8B0000"
         android:text="Tickets"
-        android:onClick="onTicketsClick"
         android:textColor="#FFFFFF" />
 
 </RelativeLayout>
