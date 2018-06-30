@@ -20,9 +20,8 @@ The following **optional** features are implemented:
 * [X] Improved the user interface by experimenting with styling and coloring.
 * [X] Apply rounded corners for the poster or background images using [Glide transformations](https://guides.codepath.com/android/Displaying-Images-with-the-Glide-Library#transformations)
 * [X] Apply the popular [Butterknife annotation library](http://guides.codepath.com/android/Reducing-View-Boilerplate-with-Butterknife) to reduce boilerplate code.
-* [ ] Allow video trailers to be played in full-screen using the YouTubePlayerView from the details screen. 
-I Spent a long time on this (almost two days) but it didn't work in the end. I can send my code (it honestly almost works, just 
-can't get the video to play it pauses) :( 
+* [X] Allow video trailers to be played in full-screen using the YouTubePlayerView from the details screen. 
+I Spent a long time on this (almost two days) but it didn't work in the end. I can send my code (it honestly almost works, just can't get the video to play it pauses) :( You can see this feature by selecting a movie and then clicking is Title. 
 
 The following **additional** features are implemented:
 
