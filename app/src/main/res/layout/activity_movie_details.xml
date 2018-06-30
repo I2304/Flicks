@@ -14,7 +14,6 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:text="Movie Title"
-        android:onClick="onTrailerClick"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -40,5 +39,38 @@
         android:layout_below="@+id/tvTitle"
         android:numStars="5"
         android:stepSize="0.5" />
-    
+
+    <Button
+        android:id="@+id/btnTrailer"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="#8B0000"
+        android:text="Trailer"
+        android:onClick="onTrailerClick"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnShowtimes"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="#8B0000"
+        android:text="Showtimes"
+        android:onClick="onShowtimesClick"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnTickets"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#8B0000"
+        android:text="Tickets"
+        android:onClick="onTicketsClick"
+        android:textColor="#FFFFFF" />
+
 </RelativeLayout>

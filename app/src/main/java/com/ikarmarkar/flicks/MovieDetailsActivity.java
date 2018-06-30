@@ -4,10 +4,12 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.LayerDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -31,7 +33,11 @@ public class MovieDetailsActivity extends AppCompatActivity {
     TextView tvOverview;
     RatingBar rbVoteAverage;
     RatingBar ratingBar;
+    Button btnTickets;
+    Button btnShowtimes;
 
+    public final static String Tickets_URL = "https://www.amctheatres.com";
+    public final static String Showtimes_URL = "https://www.amctheatres.com/showtimes";
     public final static String API_BASE_URl = "https://api.themoviedb.org/3";
     public final static String API_KEY_PARAM = "api_key";
     public final static String TAG = "MovieTrailerActivity";
@@ -66,9 +72,30 @@ public class MovieDetailsActivity extends AppCompatActivity {
         LayerDrawable stars = (LayerDrawable) ratingBar.getProgressDrawable();
         stars.getDrawable(2).setColorFilter(Color.RED, PorterDuff.Mode.SRC_ATOP);
 
+        btnTickets = (Button) findViewById(R.id.btnTickets);
+        btnShowtimes = (Button) findViewById(R.id.btnShowtimes);
+        btnTickets.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                goToUrl(Tickets_URL);
+            }
+        });
+        btnShowtimes.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                goToUrl(Showtimes_URL);
+            }
+        });
+
         getTrailer();
     }
 
+    // go to a link
+    public void goToUrl(String url) {
+        Uri uriUrl = Uri.parse(url);
+        Intent internet = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(internet);
+    }
+
+    // launch trailer in youtube
     public void getTrailer() {
         url = API_BASE_URl + "/movie/" + movie.getId() + "/videos";
         RequestParams params = new RequestParams();
@@ -92,6 +119,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         });
     }
 
+    // start trailer activity
     public void onTrailerClick(View v)
     {
         Intent intent = new Intent(this, MovieTrailerActivity.class);
