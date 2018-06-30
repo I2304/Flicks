@@ -131,7 +131,6 @@ public class MovieListActivity extends AppCompatActivity {
                 catch (JSONException e){
                     logError("Failed parsing configuration", e, true);
                 }
-
             }
 
             @Override

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="api_key">069720c91ebe3e6d8b9c430a368b74b2</string>;
+    <string name="youtube_api_key">AIzaSyCSpnRyk8cW53cHZMI2qqEL5XR6PG83oRg</string>;
 </resources>
